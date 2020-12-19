@@ -1,0 +1,29 @@
+{"myBudget":
+    [
+        {"title":"Eat out",
+            "budget":120
+        },
+        {"title":"Rent",
+            "budget":375
+        },
+        {"title":"Grocery",
+            "budget":110
+        },
+        {"title":"clothes",
+            "budget":200
+        },
+        {"title":"classes",
+            "budget":400
+        },
+        {"title":"art_class",
+            "budget":100
+        },
+        {"title":"trips",
+            "budget":200
+        },
+        {"title":"sports",
+            "budget":100
+        }
+        
+    ]
+}

@@ -1,0 +1,81 @@
+
+<main class="center">
+  <!-- A11y Typrography-->
+      <div class="_inline-block" >
+           <!-- A11y standard.Here we generally use few links for easy accessibility-->
+      <h1><a name="maincontent" id="maincontent"></a></h1>
+        <h1>All views are available</h1>
+        <h2>
+          Chart js, D3 js, bar views
+          </h2>
+<article>
+
+
+<a routerLink="add" class="btn btn-sm btn-success mb-2">Add data</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 30%">Title</th>
+            <th style="width: 30%">Budget </th>
+            <th style="width: 30%">Color</th>
+            <th style="width: 30%">Expense</th>
+            <th style="width: 10%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let userbudgetdata of usersbudgetdata">
+            <td>{{userbudgetdata.title}}</td>
+            <td>{{userbudgetdata.budget}}</td>
+            <td>{{userbudgetdata.color}}</td>
+            <td>{{userbudgetdata.expense}}</td>
+            <td style="white-space: nowrap">
+                <a routerLink="edit/{{userbudgetdata.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
+                <button (click)="deleteData(userbudgetdata.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="userbudgetdata.isDeleting">
+                    <span *ngIf="userbudgetdata.isDeleting" class="spinner-border spinner-border-sm"></span>
+                    <span *ngIf="!userbudgetdata.isDeleting">Delete</span>
+                </button>
+            </td>
+        </tr>
+        <tr *ngIf="!usersbudgetdata">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+<!-- <form (ngSubmit)="onSubmitMonth()">
+  <label for="months">Choose a Month:</label>
+  <select name="months" id="months">
+    <option value="Jan">Jan</option>
+    <option value="Feb">Feb</option>
+    <option value="March">March</option>
+    <option value="April">April</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+</form> -->
+
+
+<h1>Chart js- Pie chart</h1>
+  <h1>
+    <p>
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </p>
+
+  </h1>
+  <h1>Bar graph </h1>
+  <h1>
+    <p>
+      <canvas id="bargraph" width="400" height="400"></canvas>
+    </p>
+
+  </h1>
+  <h1>D3 js -Pie chart</h1>
+<figure id="pie"></figure>
+</article>
+</div>
+</main>

@@ -208,8 +208,7 @@ app.post('/login',(req,res)=>{
                 success: true,
                 err:null,
                 user:username,
-                token,
-                expiresIn: 10000
+                token
             });
                mongoose.connection.close();
            }) 
